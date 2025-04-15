@@ -1,13 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aprendé Ajedrez desde Cero</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+        --bg: #f9f9f9;
+        --primary: #1a1a2e;
+        --secondary: #16213e;
+        --accent: #e94560;
+        --light: #fff;
+        --text: #333;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      
+      header {
+        background: var(--primary);
+        color: var(--light);
+        text-align: center;
+        padding: 3rem 1rem;
+        width: 100%;
+      }
+      
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      header p {
+        font-size: 1.2rem;
+      }
+      
+      .container {
+        max-width: 1000px;
+        width: 100%;
+        padding: 2rem;
+      }
+      
+      section {
+        margin-bottom: 3rem;
+      }
+      
+      h2 {
+        color: var(--secondary);
+        border-left: 5px solid var(--accent);
+        padding-left: 10px;
+        margin-bottom: 1rem;
+      }
+      
+      h3 {
+        color: var(--accent);
+        margin-top: 1.5rem;
+      }
+      
+      p, li {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+      
+      img {
+        width: 100%;
+        max-width: 700px;
+        margin: 1rem 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      img:hover {
+        transform: scale(1.02);
+      }
+      
+      ul {
+        padding-left: 1.5rem;
+      }
+      
+      footer {
+        background: var(--secondary);
+        color: var(--light);
+        text-align: center;
+        padding: 2rem;
+        margin-top: 4rem;
+        width: 100%;
+      }
+      
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+        .container {
+          padding: 1rem;
+        }
+      }
+      
+  </style>
 </head>
 <body>
-    <form action="nose">
-        
-    </form>
+
+  <header>
+    <h1>Cómo Jugar Ajedrez</h1>
+    <p>Guía completa para principiantes, paso a paso</p>
+  </header>
+
+  <div class="container">
+    
+    <section>
+      <h2>¿Qué es el ajedrez?</h2>
+      <p>El ajedrez es un juego milenario de estrategia donde dos jugadores enfrentan su inteligencia para dar jaque mate al rey rival.</p>
+      <img src="img/img1.jpg" alt="Historia del ajedrez">
+    </section>
+
+    <section>
+      <h2>Objetivo del juego</h2>
+      <p>El objetivo es inmovilizar al rey del oponente sin que pueda escapar al ataque. Esta jugada se llama <strong>jaque mate</strong>.</p>
+      <img src="img/img2.jpg" alt="Objetivo del juego de ajedrez">
+    </section>
+
+    <section>
+      <h2>Tablero y piezas</h2>
+      <p>El tablero tiene 8x8 casillas. Cada jugador cuenta con:</p>
+      <ul>
+        <li>1 Rey</li>
+        <li>1 Dama</li>
+        <li>2 Torres</li>
+        <li>2 Alfiles</li>
+        <li>2 Caballos</li>
+        <li>8 Peones</li>
+      </ul>
+      <img src="img/img3.jpg" alt="Tablero y piezas">
+      <img src="img/img4.jpg" alt="Ubicación inicial de las piezas">
+    </section>
+
+    <section>
+      <h2>Movimientos básicos</h2>
+      <h3>Rey</h3>
+      <p>Se mueve una casilla en cualquier dirección.</p>
+      <img src="img/img5.jpg" alt="Movimiento del rey">
+
+      <h3>Dama</h3>
+      <p>Combina los movimientos de la torre y el alfil.</p>
+      <img src="img/img6.jpg" alt="Movimiento de la dama">
+
+      <h3>Torre</h3>
+      <p>Se mueve en línea recta, horizontal o vertical.</p>
+      <img src="img/img7.jpg" alt="Movimiento de la torre">
+
+      <h3>Alfil</h3>
+      <p>Solo en diagonales.</p>
+      <img src="img/img8.jpg" alt="Movimiento del alfil">
+
+      <h3>Caballo</h3>
+      <p>Forma de L: dos casillas en una dirección y una en perpendicular.</p>
+      <img src="img/img9.jpg" alt="Movimiento del caballo">
+
+      <h3>Peón</h3>
+      <p>Avanza recto pero captura en diagonal. Puede mover dos casillas en su primer turno.</p>
+      <img src="img/img10.jpg" alt="Movimiento del peón">
+    </section>
+
+    <section>
+      <h2>Reglas especiales</h2>
+      <ul>
+        <li><strong>Enroque:</strong> El rey y la torre se mueven juntos bajo ciertas condiciones.</li>
+        <li><strong>Captura al paso:</strong> Peón captura a otro que se movió dos casillas.</li>
+        <li><strong>Promoción:</strong> Un peón que llega al otro lado puede convertirse en dama u otra pieza.</li>
+      </ul>
+      <img src="img/img11.jpg" alt="Enroque">
+      <img src="img/img12.jpg" alt="Captura al paso">
+      <img src="img/img13.png" alt="Promoción del peón">
+    </section>
+
+    <section>
+      <h2>Jaque y jaque mate</h2>
+      <p>Cuando un rey está amenazado pero puede escapar, es un <em>jaque</em>. Si no tiene salida, es <strong>jaque mate</strong>.</p>
+      <img src="img/img14.jpg" alt="Jaque mate">
+    </section>
+
+    <section>
+      <h2>Empates y finales</h2>
+      <ul>
+        <li>Empate por ahogado</li>
+        <li>Falta de material</li>
+        <li>Repetición de jugadas</li>
+        <li>Regla de 50 movimientos</li>
+      </ul>
+      <img src="img/img15.png" alt="Empate en ajedrez">
+    </section>
+
+    <section>
+      <h2>Consejos para principiantes</h2>
+      <ul>
+        <li>Controlá el centro del tablero</li>
+        <li>Desarrollá tus piezas antes de mover peones innecesarios</li>
+        <li>No expongas a tu rey</li>
+        <li>Observá las amenazas del oponente</li>
+      </ul>
+      <img src="img/img16.png" alt="Consejos para jugar mejor">
+    </section>
+
+    <section>
+      <h2>Ejercicios visuales</h2>
+      <p>Practicá con estas posiciones:</p>
+      <img src="img/img20.png" alt="Ejercicio 4">
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Aprender Ajedrez. Sitio educativo sin fines de lucro.</p>
+  </footer>
 </body>
 </html>
